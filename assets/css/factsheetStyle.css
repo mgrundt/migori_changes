@@ -78,7 +78,8 @@ section#section-4 {
   padding-bottom: 0;
 }
 
-#porridge-facts section#section-4 {
+#porridge-facts section#section-4,
+#kidneybohnen-facts section#section-4 {
   padding-top: 0;
 }
 
@@ -144,9 +145,6 @@ section#section-4 {
   margin-top: 15px;
 }
 
-.bar-above.mh87-title {
-  min-height: 87px;
-}
 .table-title.center {
   text-align: center;
 }
@@ -159,6 +157,10 @@ tr.highlighted {
 .img-below-table {
   padding-top: 15px;
   padding-bottom: 15px;
+}
+
+#hartweizengriess-facts .img-below-table {
+  max-width: 436px;
 }
 
 /* link to pdf of current fact sheet */
@@ -190,10 +192,23 @@ tr.highlighted {
 .recipe-ingredients {
   color: #218574;
 }
+.recipe-ingredients p {
+  color: #232323;
+  margin-top: 90px;
+}
+
+.recipe-source {
+  position: relative;
+}
 
 .recipe-source a {
   text-decoration: none;
   color: #218574;
+}
+
+#schokomuesli-facts .img-recipe {
+  max-width: 60%;
+  float: right;
 }
 
 /* sources in images */
@@ -245,20 +260,29 @@ tr.highlighted {
   margin-bottom: 0;
 }
 
-.recipe-source {
-  position: relative;
-}
-
-
 
 @media (min-width: 768px) {
+  .bar-above.mh87-title {
+    min-height: 87px;
+  }
+
+  .bar-above.mh68-title {
+    min-height: 68px;
+  }
+
   .factsheet-link .link-container {
     position: absolute;
     right: 15px;
     bottom: 16px;
   }
-  #porridge-facts .factsheet-link { margin-top: 32px; }
-  #porridge-facts .factsheet-link .link-container { bottom: 0; }
+
+  #porridge-facts .factsheet-link,
+  #kidneybohnen-facts .factsheet-link,
+  #schokomuesli-facts .factsheet-link { margin-top: 32px; }
+
+  #porridge-facts .factsheet-link .link-container,
+  #kidneybohnen-facts .factsheet-link .link-container,
+  #schokomuesli-facts .factsheet-link .link-container { bottom: 0; }
 
   .img-1 { margin-top: 60px; }
 
@@ -270,6 +294,23 @@ tr.highlighted {
     /* max-width: 140px; */
     /* top: -80px; */
     right: 20px;
+  }
+
+  #kidneybohnen-facts #section-2 .img-bubble {
+    top: initial;
+    bottom: 130px;
+  }
+
+  #kidneybohnen-facts #section-2 .img-1 {
+    position: absolute;
+    bottom: 23px;
+  }
+}
+
+@media (min-width: 992px) {
+  #kidneybohnen-facts #section-2 .img-bubble {
+    top: initial;
+    bottom: 160px;
   }
 }
 
@@ -284,12 +325,15 @@ tr.highlighted {
     padding-right: 30px;
   }
 
-  .recipe-source {
+  #blaumohn-facts .recipe-source,
+  #schokomuesli-facts .recipe-source {
     position: absolute;
     bottom: 0;
   }
-  #porridge-facts .recipe-source {
-    position: relative;
+
+  #kidneybohnen-facts #section-2 .img-bubble {
+    top: initial;
+    bottom: 190px;
   }
 }
 
@@ -310,7 +354,6 @@ tr.highlighted {
     font-size: 2rem;
   }
 
-
   .intro-text {
     font-size: 1.2rem;
     padding-left: 30px;
@@ -323,7 +366,15 @@ tr.highlighted {
     line-height: calc( 1.4 * (1rem + (1 - 1) * ((100vw - 20rem) / (48 - 20))));
   }
 
-  .img-recipe { padding-bottom: 15px;}
+  #kidneybohnen-facts #section-2 .img-bubble {
+    top: initial;
+    bottom: 130px;
+  }
+
+  .img-recipe {
+    padding-bottom: 15px;
+    max-width: 60%;
+  }
 
   .source {
     font-size: 0.5rem;
