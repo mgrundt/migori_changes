@@ -159,10 +159,6 @@ tr.highlighted {
   padding-bottom: 15px;
 }
 
-#hartweizengriess-facts .img-below-table {
-  max-width: 436px;
-}
-
 /* link to pdf of current fact sheet */
 .factsheet-link {
   position: relative;
@@ -314,6 +310,10 @@ tr.highlighted {
   #schokomuesli-facts .recipe-source {
     position: absolute;
     bottom: 0;
+  }
+
+  #hartweizengriess-facts .img-below-table {
+    max-width: 436px;
   }
 }
 
